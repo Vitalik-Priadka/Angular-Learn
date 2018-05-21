@@ -1,6 +1,5 @@
-import { Component, Output, EventEmitter } from '@angular/core';
-import { Todo } from '../shared/todo';
-import { listToDo } from '../shared/data';
+import { Component } from '@angular/core';
+import {TodoService} from "../shared/todo.service";
 
 // Декоратор
 @Component({
@@ -10,9 +9,10 @@ import { listToDo } from '../shared/data';
 })
 export class TodoFormComponent {
   newTodoTitle: string = '';
-  @Output() add = new EventEmitter();
+
+  constructor(private todoService: TodoService){}
 
   onSubmit(){
-    this.add.emit(this.newTodoTitle);
+    this.todoService.createTodo(this.newTodoTitle);
   }
 }

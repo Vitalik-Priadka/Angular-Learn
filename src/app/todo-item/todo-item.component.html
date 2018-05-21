@@ -1,6 +1,6 @@
 <!-- Item Start -->
 <div class="todo-item" [class.completed]="item.completed">
-  <button class="checkbox icon" (click)="toggle()">
+  <button class="checkbox icon" (click)="onToggle()">
     <i class="material-icons" [innerText]="item.completed ? 'check_box' : 'check_box_outline_blank'"></i>
   </button>
 

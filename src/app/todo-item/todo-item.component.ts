@@ -11,11 +11,12 @@ import { listToDo } from '../shared/data';
 export class TodoItemComponent {
   @Input() item: Todo;
   @Output() delete = new EventEmitter();
+  @Output() toggle = new EventEmitter();
 
-  toggle(){
-    this.item.completed = !this.item.completed;
+  onToggle(){
+    this.toggle.emit(this.item);
   }
   onDelete(){
-    this.delete.emit();
+    this.delete.emit(this.item);
   }
 }
