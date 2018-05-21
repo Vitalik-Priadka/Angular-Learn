@@ -1,0 +1,5 @@
+<!-- Можно юзать кастомные атрибуты (для метки) #inputTitle -->
+<form  class="todo-form" (ngSubmit)="onSubmit(); todoForm.reset();" #todoForm="ngForm" autocomplete="off">
+  <input type="text" placeholder="Что нужно сделать?" [(ngModel)]="newTodoTitle" name="title" required>
+  <button type="submit" ngClass="submit-btn" [disabled]="todoForm.form.invalid">Добавить</button>
+</form>

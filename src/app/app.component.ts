@@ -1,28 +1,7 @@
 import { Component } from '@angular/core';
+import { Todo } from './shared/todo';
+import { listToDo } from './shared/data';
 
-class Todo {
-  constructor(public title: string,
-              public completed: boolean = false){}
-}
-
-const todos: Todo[] = [
-  {
-    title: 'Изучить JavaScript',
-    completed: false,
-  },
-  {
-    title: 'Изучить Angular',
-    completed: false,
-  },
-  {
-    title: 'Написать приложение',
-    completed: true,
-  },
-  {
-    title: 'Купить бананьчик',
-    completed: true,
-  },
-];
 
 // Декоратор
 @Component({
@@ -31,25 +10,11 @@ const todos: Todo[] = [
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title: string = 'Vilatik First App';
-  version: number = 0.3;
-  todos: Todo[] = todos;
-  newTodoTitle: string = '';
+  info: string = 'Вы можете записать Task и добавить его в List:';
+  todos: Todo[] = listToDo;
 
-  create() {
-    let todo: Todo = new Todo(this.newTodoTitle);
+  create(title: string){
+    const todo = new Todo(title);
     this.todos.push(todo);
-    this.newTodoTitle = '';
   }
-
-  toggle(todo: Todo){
-    todo.completed = !todo.completed;
-  };
-
-  delete(todo: Todo){
-    let index = this.todos.indexOf(todo);
-    if (index){
-      this.todos.splice(index,1);
-    }
-  };
 }

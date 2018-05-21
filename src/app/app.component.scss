@@ -1,3 +1,4 @@
+$font-stack:    Helvetica, sans-serif;
 $font-size: 14px;
 $logo-width: 50px;
 
@@ -5,6 +6,8 @@ $color-main-blue: #1976D2;
 $color-main-red: #dd0031;;
 $color-main-text: #f5f5f5;
 $color-main-grey: #757575;
+$background-color: #f5f5f5;
+
 
 ul {
   margin: 0;
@@ -81,13 +84,6 @@ button {
   }
 }
 
-
-
-.center {
-  text-align: center;
-}
-
-
 input {
   font-size: 16px;
   color: $color-main-grey;
@@ -99,122 +95,18 @@ input {
   outline: none;
 }
 
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: $color-main-blue;
-  height: 56px;
-  min-height: 56px;
-  padding: 0;
-  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.24);
-  color: $color-main-text;
-}
-
-header img {
-  width: $logo-width;
-}
-
-header h1 {
-  font-weight: 400;
-  margin: 0 0 0 10px;
-}
-
 main {
   width: 600px;
   margin: auto;
-  padding: 2rem;
+  padding-top: 2%;
+  padding-bottom: 4%;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
 }
 
-.todo-form,
-.todo-list {
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
-  border-radius: 2px;
+todo-form,
+todo-list{
   width: 100%;
-  background-color: white;
-}
-
-
-
-/* Todo form */
-.todo-form {
-  display: flex;
-  padding: 1em;
-  margin-bottom: 1em;
-}
-
-.todo-form input {
-  flex: 1;
-}
-
-.todo-form input:focus {
-  border: 1px solid $color-main-blue;
-}
-
-.todo-form input:focus.ng-invalid.ng-dirty {
-  border: 1px solid $color-main-red;
-}
-
-.todo-form button {
-  margin-left: 16px;
-}
-
-
-
-/* Todo list */
-.todo-list {
-  display: flex;
-  flex-direction: column;
-}
-
-.todo-item {
-  padding: 1em;
-  display: flex;
-  align-items: center;
-}
-
-.todo-item:not(:first-child) {
-  border-top: 1px solid rgba(0,0,0,.1);
-}
-
-.todo-item .checkbox {
-  margin-right: .25em;
-}
-
-.todo-item.completed .title {
-  text-decoration: line-through;
-}
-
-.todo-item.completed .title,
-.todo-item.completed .material-icons {
-  color: lightgray;
-}
-
-.todo-item input {
-  flex: 1;
-  margin-right: 1rem;
-}
-
-.todo-item .actions {
-  margin-left: auto;
-  opacity: 0;
-  transition: all .2s;
-}
-
-.todo-item:hover .actions {
-  opacity: 1;
-}
-
-
-footer {
-  width: 100%;
-  background-color: $color-main-blue;
-  position: absolute;
-  padding: 4px 0;
-  bottom: 0;
-  color: $color-main-text;
 }
