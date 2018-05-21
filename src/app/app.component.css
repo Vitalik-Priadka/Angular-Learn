@@ -26,40 +26,43 @@ button {
   text-decoration: none;
   text-align: center;
   line-height: 36px;
-  vertical-align: middle; }
+  vertical-align: middle;
+  -webkit-transition: 0.5s;
+  transition: 0.5s; }
+  button:hover {
+    background-color: rgba(158, 158, 158, 0.2); }
+  button:active {
+    background-color: rgba(158, 158, 158, 0.4); }
+  button.icon {
+    border-radius: 50%;
+    font-size: 24px;
+    height: 32px;
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 32px;
+    width: 32px;
+    padding: 0;
+    overflow: hidden;
+    line-height: normal; }
+    button.icon .material-icons {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-12px, -12px);
+      transform: translate(-12px, -12px);
+      line-height: 24px;
+      width: 24px;
+      vertical-align: middle; }
+  button.submit-btn {
+    border: solid 1px #757575; }
+  button[disabled] {
+    color: rgba(0, 0, 0, 0.26);
+    border: solid 1px lightgray;
+    cursor: default;
+    background-color: transparent; }
 
-button:hover {
-  background-color: rgba(158, 158, 158, 0.2); }
-
-button:active {
-  background-color: rgba(158, 158, 158, 0.4); }
-
-button.icon {
-  border-radius: 50%;
-  font-size: 24px;
-  height: 32px;
-  margin-left: 0;
-  margin-right: 0;
-  min-width: 32px;
-  width: 32px;
-  padding: 0;
-  overflow: hidden;
-  line-height: normal; }
-
-button.icon .material-icons {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-12px, -12px);
-  transform: translate(-12px, -12px);
-  line-height: 24px;
-  width: 24px;
-  vertical-align: middle; }
-
-button[disabled] {
-  color: rgba(0, 0, 0, 0.26);
-  cursor: default;
-  background-color: transparent; }
+.center {
+  text-align: center; }
 
 input {
   font-size: 16px;
@@ -165,8 +168,5 @@ footer {
   padding: 4px 0;
   bottom: 0;
   color: #f5f5f5; }
-
-.center {
-  text-align: center; }
 
 /*# sourceMappingURL=app.component.css.map */

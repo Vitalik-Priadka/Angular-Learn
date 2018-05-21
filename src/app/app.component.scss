@@ -1,9 +1,10 @@
 $font-size: 14px;
 $logo-width: 50px;
 
-$main-blue: #1976D2;
-$main-red: #dd0031;;
-$main-text: #f5f5f5;
+$color-main-blue: #1976D2;
+$color-main-red: #dd0031;;
+$color-main-text: #f5f5f5;
+$color-main-grey: #757575;
 
 ul {
   margin: 0;
@@ -15,7 +16,7 @@ button {
   background: 0 0;
   border: none;
   border-radius: 2px;
-  color: #757575;
+  color: $color-main-grey;
   position: relative;
   height: 36px;
   margin: 0;
@@ -35,49 +36,61 @@ button {
   text-align: center;
   line-height: 36px;
   vertical-align: middle;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: rgba(158,158,158,.2);
+  }
+  &:active {
+    background-color: rgba(158,158,158,.4);
+  }
+  &.icon {
+    border-radius: 50%;
+    font-size: 24px;
+    height: 32px;
+    margin-left: 0;
+    margin-right: 0;
+    min-width: 32px;
+    width: 32px;
+    padding: 0;
+    overflow: hidden;
+    line-height: normal;
+
+    & .material-icons {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -webkit-transform: translate(-12px,-12px);
+      transform: translate(-12px,-12px);
+      line-height: 24px;
+      width: 24px;
+      vertical-align: middle;
+    }
+  }
+
+  &.submit-btn{
+    border: solid 1px $color-main-grey;
+  }
+
+  &[disabled] {
+    color: rgba(0,0,0,.26);
+    border: solid 1px lightgray;
+    cursor: default;
+    background-color: transparent;
+  }
 }
 
-button:hover {
-  background-color: rgba(158,158,158,.2);
+
+
+.center {
+  text-align: center;
 }
 
-button:active {
-  background-color: rgba(158,158,158,.4);
-}
-
-button.icon {
-  border-radius: 50%;
-  font-size: 24px;
-  height: 32px;
-  margin-left: 0;
-  margin-right: 0;
-  min-width: 32px;
-  width: 32px;
-  padding: 0;
-  overflow: hidden;
-  line-height: normal;
-}
-
-button.icon .material-icons {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-12px,-12px);
-  transform: translate(-12px,-12px);
-  line-height: 24px;
-  width: 24px;
-  vertical-align: middle;
-}
-
-button[disabled] {
-  color: rgba(0,0,0,.26);
-  cursor: default;
-  background-color: transparent;
-}
 
 input {
   font-size: 16px;
-  color: #757575;
+  color: $color-main-grey;
   background-color: #fafafa;
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   padding: .25em;
@@ -90,12 +103,12 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: $main-blue;
+  background: $color-main-blue;
   height: 56px;
   min-height: 56px;
   padding: 0;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.24);
-  color: $main-text;
+  color: $color-main-text;
 }
 
 header img {
@@ -139,11 +152,11 @@ main {
 }
 
 .todo-form input:focus {
-  border: 1px solid $main-blue;
+  border: 1px solid $color-main-blue;
 }
 
 .todo-form input:focus.ng-invalid.ng-dirty {
-  border: 1px solid $main-red;
+  border: 1px solid $color-main-red;
 }
 
 .todo-form button {
@@ -199,12 +212,9 @@ main {
 
 footer {
   width: 100%;
-  background-color: $main-blue;
+  background-color: $color-main-blue;
   position: absolute;
   padding: 4px 0;
   bottom: 0;
-  color: $main-text;
-}
-.center {
-  text-align: center;
+  color: $color-main-text;
 }
