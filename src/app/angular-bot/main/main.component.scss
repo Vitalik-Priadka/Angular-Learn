@@ -1,13 +1,16 @@
-.main-image {
+
+.main-image{
   height: 325px;
   width: 300px;
   margin: auto;
   background: url("../../../assets/loin-image.png");
   background-size: 100%;
   background-position: center;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+}
+p{
+  margin: 5px 0;
+}
+h3{
 
-p {
-  margin: 5px 0; }
-
-/*# sourceMappingURL=main.component.css.map */
+}

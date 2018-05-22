@@ -1,0 +1,42 @@
+.message {
+  border-radius: 50px;
+  margin: 0 15px 10px;
+  padding: 15px 20px;
+  position: relative;
+  font-weight: bold; }
+
+.message.to {
+  background-color: #2095FE;
+  color: #fff;
+  margin-left: 100px;
+  text-align: right; }
+
+.message.from {
+  background-color: #E5E4E9;
+  color: #363636;
+  margin-right: 100px; }
+
+.message.to + .message.to,
+.message.from + .message.from {
+  margin-top: -10px; }
+
+.sent-form {
+  background-color: #dd0031;
+  display: flex;
+  flex-direction: row;
+  padding: 1em;
+  margin-bottom: 1em;
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 2px;
+  width: 100%;
+  background-color: white; }
+  .sent-form input {
+    flex: 1; }
+  .sent-form input:focus {
+    border: 1px solid #1976D2; }
+  .sent-form input:focus.ng-invalid.ng-dirty {
+    border: 1px solid #dd0031; }
+  .sent-form button {
+    margin-left: 16px; }
+
+/*# sourceMappingURL=chat.component.css.map */

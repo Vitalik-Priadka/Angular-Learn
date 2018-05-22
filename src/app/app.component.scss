@@ -12,6 +12,7 @@ $background-color: #f5f5f5;
   width: 600px;
   margin: auto;
   display: flex;
+  position: relative;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
@@ -59,12 +60,10 @@ $background-color: #f5f5f5;
     -webkit-transition: 0.5s;
     transition: 0.5s;
 
-    &:hover {
+    &:hover,
+    &.button-active{
       background-color: $color-main-text;
       color: $color-main-grey;
-    }
-    &:active {
-      background-color: $color-main-blue;
     }
 
   }

@@ -2,6 +2,7 @@
   width: 600px;
   margin: auto;
   display: flex;
+  position: relative;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column; }
@@ -45,10 +46,8 @@
     vertical-align: middle;
     -webkit-transition: 0.5s;
     transition: 0.5s; }
-    .buttons-block button:hover {
+    .buttons-block button:hover, .buttons-block button.button-active {
       background-color: #f5f5f5;
       color: #757575; }
-    .buttons-block button:active {
-      background-color: #1976D2; }
 
 /*# sourceMappingURL=app.component.css.map */

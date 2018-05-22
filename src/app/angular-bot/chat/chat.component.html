@@ -1,3 +1,18 @@
-<p>
-  chat works!
-</p>
+<h1>Angular Bot</h1>
+
+<ng-container *ngFor="let message of messages">
+  <div class="message" [ngClass]="{ 'from': message.author === 'bot',
+                                    'to':   message.author === 'user' }">
+    {{ message.content }}
+  </div>
+</ng-container>
+
+<div class="sent-form">
+  <label *ngIf="messages.length == 0; else dialogInfo" >Ваше сообщение</label>
+  <input [(ngModel)]="value" (keyup.enter)="sendMessage()" type="text" required>
+  <button (click)="sendMessage()">Отправить</button>
+</div>
+
+<ng-template #dialogInfo>
+  <span [className]="'float-right'">Всего сообщений: {{ messages.length}}</span><br>
+</ng-template>
