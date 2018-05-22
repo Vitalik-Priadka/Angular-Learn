@@ -24,10 +24,10 @@ body {
 
 header {
   display: flex;
-  justify-content: center;
   align-items: center;
   background: $color-main-blue;
   height: 56px;
+  width: 100%;
   min-height: 56px;
   padding: 0;
   box-shadow: 0 2px 5px 0 rgba(0,0,0,0.24);
@@ -53,4 +53,10 @@ footer {
 
 .center {
   text-align: center;
+}
+
+app-chat,
+app-main,
+app-todo{
+  width: 100%;
 }

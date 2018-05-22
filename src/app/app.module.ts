@@ -1,25 +1,24 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule} from "@angular/forms";
+
+import { TodoAppModule} from "./todo-app/todo-app.module";
+import {AngularBotModule} from "./angular-bot/angular-bot.module";
+import { AppRoutingModule} from "./app-routing.module";
 
 import { AppComponent } from './app.component';
-import { TodoFormComponent } from './todo-form/todo-form.component';
-import { TodoListComponent } from './todo-list/todo-list.component';
-import { TodoItemComponent } from './todo-item/todo-item.component';
-import { TodoService } from "./shared/todo.service";
+
 
 @NgModule({
   declarations: [   //Регистрация
     AppComponent,
-    TodoFormComponent,
-    TodoListComponent,
-    TodoItemComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    AppRoutingModule,
+    TodoAppModule,
+    AngularBotModule,
   ],
-  providers: [TodoService], // Регистр сервисов
+  providers: [], // Регистр сервисов
   bootstrap: [AppComponent] //Для запуска использовать это
 })
 export class AppModule { }

@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import {TodoService} from "../shared/todo.service";
+import {TodoService} from "../../shared/todo.service";
 
 // Декоратор
 @Component({
   selector: 'todo-form',
   templateUrl: './todo-form.component.html',
-  styleUrls: ['../app.component.css','./todo-form.component.css']
+  styleUrls: ['../todo/todo.component.css','./todo-form.component.css']
 })
 export class TodoFormComponent {
   newTodoTitle: string = '';
