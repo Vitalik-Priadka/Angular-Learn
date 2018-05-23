@@ -1,8 +1,17 @@
-import { listToDo } from './data';
+import { listToDo } from '../shared/data-todos';
 import { Todo } from './todo';
+import {HttpService} from "../shared/http.service";
+import {environment} from "../../environments/environment";
 
 export class TodoService {
   todos: Todo[] = listToDo;
+
+  // constructor(private httpService: HttpService){}
+  //   //
+  //   // getListTodos(){
+  //   //   this.httpService.get(environment.dataTodo);
+  //   // }
+
 
   getTodos(){
     return this.todos;

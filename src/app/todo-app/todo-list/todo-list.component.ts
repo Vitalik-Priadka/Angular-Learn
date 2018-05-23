@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
-import { TodoService} from "../../shared/todo.service";
-import { Todo } from '../../shared/todo';
+import { TodoService} from "../todo.service";
+import { Todo } from '../todo';
+import {HttpService} from "../../shared/http.service";
 
 
 // Декоратор
@@ -15,7 +16,11 @@ export class TodoListComponent implements OnInit{
 
   constructor(private todoService: TodoService){
     this.todos = [];
+    // this.todoService.getListTodos().subscribe( data => {
+    //   console.log(JSON.parse(data['data']));
+    // });
   }
+
   ngOnInit(){
     this.todos = this.todoService.getTodos();
   }

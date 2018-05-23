@@ -1,0 +1,20 @@
+[{
+    "data": [
+      {
+        "title": "Изучить JavaScript",
+        "completed": false
+      },
+      {
+        "title": "Изучить Angular",
+        "completed": false
+      },
+      {
+        "title": "Написать приложение",
+        "completed": false
+      },
+      {
+        "title": "Сходить на Х..Ханна Соло",
+        "completed": false
+      }
+    ]
+  }]

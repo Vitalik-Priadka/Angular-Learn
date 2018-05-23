@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {TodoService} from "../../shared/todo.service";
+import {TodoService} from "../todo.service";
 
 // Декоратор
 @Component({

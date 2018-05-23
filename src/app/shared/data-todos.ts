@@ -13,7 +13,7 @@ export let listToDo = [
     completed: true,
   },
   {
-    title: 'Ой блядь, эта ссанина работает!',
+    title: 'Сходить на Х..Ханна Соло!',
     completed: false,
   },
 ];

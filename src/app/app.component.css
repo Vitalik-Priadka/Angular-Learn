@@ -1,6 +1,8 @@
 .content-block {
   width: 600px;
   margin: auto;
+  padding-top: 15px;
+  padding-bottom: 50px;
   display: flex;
   position: relative;
   justify-content: flex-start;

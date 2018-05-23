@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { Todo } from '../../shared/todo';
+import { Todo } from '../todo';
 
 // Декоратор
 @Component({
