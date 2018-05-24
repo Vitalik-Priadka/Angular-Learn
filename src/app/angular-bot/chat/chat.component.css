@@ -7,7 +7,7 @@
   font-weight: bold; }
 
 .message.to {
-  background-color: #2095FE;
+  background-color: #1976D2;
   color: #fff;
   margin-left: 100px;
   text-align: right; }
@@ -20,5 +20,22 @@
 .message.to + .message.to,
 .message.from + .message.from {
   margin-top: -10px; }
+
+.chat-box {
+  overflow-y: hidden; }
+
+#chat-msg-area {
+  max-height: 250px;
+  overflow-y: scroll; }
+  #chat-msg-area::-webkit-scrollbar {
+    width: 5px; }
+  #chat-msg-area::-webkit-scrollbar-track {
+    -webkit-box-shadow: none; }
+  #chat-msg-area::-webkit-scrollbar-thumb {
+    background-color: #1976D2;
+    outline: 1px solid #1976D2; }
+
+.chat-field {
+  width: 70%; }
 
 /*# sourceMappingURL=chat.component.css.map */

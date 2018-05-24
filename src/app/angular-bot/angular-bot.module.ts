@@ -20,7 +20,6 @@ import {
     MatButtonModule,
     MatInputModule,
     MatCardModule,
-    MatFormFieldModule
   ],
   declarations: [MainComponent, ChatComponent]
 })

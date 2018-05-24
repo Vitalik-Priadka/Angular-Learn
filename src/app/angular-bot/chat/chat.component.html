@@ -1,20 +1,24 @@
 <h1>Angular Bot</h1>
-<mat-card>
 
-  <ng-container *ngFor="let message of messages">
-    <div class="message" [ngClass]="{ 'from': message.author === 'bot',
+<mat-card class="chat-box">
+
+  <div id="chat-msg-area">
+    <ng-container *ngFor="let message of messages">
+      <div class="message" [ngClass]="{ 'from': message.author === 'bot',
                                     'to':   message.author === 'user' }">
-      {{ message.content }}
-    </div>
-  </ng-container>
-
-  <div class="sent-form">
-    <label *ngIf="messages.length == 0; else dialogInfo" >Ваше сообщение</label>
-    <input matInput="" [(ngModel)]="value" (keyup.enter)="sendMessage()" type="text" required>
-    <button mat-button="" (click)="sendMessage()">Отправить</button>
+        {{ message.content }}
+      </div>
+    </ng-container>
   </div>
 
+  <form  id="chat-form" (ngSubmit)="sendMessage(); chatForm.reset();" #chatForm="ngForm" autocomplete="off">
+    <label *ngIf="messages.length == 0; else dialogInfo" for="chat-msg"></label>
 
+    <mat-form-field class="chat-field">
+      <input type="text" matInput=""  placeholder="Ваше сообщение" [(ngModel)]="value" id="chat-msg" name="msg-input" required>
+    </mat-form-field>
+    <button type="submit" mat-button="" ngClass="submit-btn" [disabled]="chatForm.form.invalid">Добавить</button>
+  </form>
 
   <ng-template #dialogInfo>
     <span [className]="'float-right'">Всего сообщений: {{ messages.length}}</span><br>

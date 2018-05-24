@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   titleApp: string = 'Welcome to Vilatik First App!';
-  versionApp: number = 0.4;
+  versionApp: number = 0.5;
 
   links = [
     {path: '/main', label: 'Главная', active: 'button-active'},

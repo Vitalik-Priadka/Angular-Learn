@@ -13,7 +13,11 @@ export let listToDo = [
     completed: true,
   },
   {
-    title: 'Сходить на Х..Ханна Соло!',
-    completed: false,
+    title: 'Сходить на Дэдпула 2!',
+    completed: true,
+  },
+  {
+    title: 'Сходить на Ханна Соло!',
+    completed: true,
   },
 ];

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, Subject} from "rxjs";
+import {ChatComponent} from "./chat/chat.component";
 
 export class Message {
   constructor(public author: string, public content: string){}
@@ -17,7 +18,10 @@ export class ChatService {
     "Test": "And what?",
     "By": "Ohhh..",
     "How are you?": "Potato!",
-    "default": "What?"
+    "Привет": "Добрый день!",
+    "Как дела?": "Цвету и пахну..",
+    "Кто ты?": "Я самый глупый бот.. Ведь я очень сильно ограничен:(",
+    "default": "What?",
   };
 
   getBotAnswer(msg: string){
@@ -27,7 +31,7 @@ export class ChatService {
     const botMessage = new Message('bot', this.getBotMessage(msg));
     setTimeout(() => {
       this.conversation.next([botMessage]);
-    }, 1500);
+    }, 500);
   }
 
   getBotMessage(question: string){

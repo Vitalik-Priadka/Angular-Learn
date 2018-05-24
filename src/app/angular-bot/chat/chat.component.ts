@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {ChatService, Message} from "../chat.service";
 
 @Component({
@@ -19,7 +19,12 @@ export class ChatComponent implements OnInit {
   }
   sendMessage(){
     this.chatService.getBotAnswer(this.value);
-    this.value = '';
+  }
+
+  scrollToBottom(){
+    let toolbarChat = document.getElementById("chat-msg-area");
+    toolbarChat.scrollTo(0, toolbarChat.scrollHeight);
+    console.log("done!");
   }
 
 }
