@@ -3,12 +3,13 @@
 <mat-card class="chat-box">
 
   <div id="chat-msg-area">
-    <ng-container *ngFor="let message of messages">
+    <ng-container *ngFor="let message of messages" >
       <div class="message" [ngClass]="{ 'from': message.author === 'bot',
                                     'to':   message.author === 'user' }">
         {{ message.content }}
       </div>
     </ng-container>
+    {{ scrollToBottom() }}
   </div>
 
   <form  id="chat-form" (ngSubmit)="sendMessage(); chatForm.reset();" #chatForm="ngForm" autocomplete="off">
@@ -17,7 +18,7 @@
     <mat-form-field class="chat-field">
       <input type="text" matInput=""  placeholder="Ваше сообщение" [(ngModel)]="value" id="chat-msg" name="msg-input" required>
     </mat-form-field>
-    <button type="submit" mat-button="" ngClass="submit-btn" [disabled]="chatForm.form.invalid">Добавить</button>
+    <button type="submit" mat-button="" ngClass="submit-btn" [disabled]="chatForm.form.invalid">Отправить</button>
   </form>
 
   <ng-template #dialogInfo>

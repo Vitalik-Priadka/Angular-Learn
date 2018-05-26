@@ -52,6 +52,7 @@ $background-color: #f5f5f5;
   &::-webkit-scrollbar-thumb {
     background-color: $color-main-blue;
     outline: 1px solid $color-main-blue;
+    border-radius: 50px;
   }
 }
 .chat-field{

@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {AfterContentInit, Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {ChatService, Message} from "../chat.service";
 
 @Component({
@@ -6,25 +6,29 @@ import {ChatService, Message} from "../chat.service";
   templateUrl: './chat.component.html',
   styleUrls: ['./chat.component.css']
 })
-export class ChatComponent implements OnInit {
+export class ChatComponent implements OnInit,AfterContentInit {
+  toolbarChat;
   messages: Message[] = [];
   value: string;
 
-  constructor(public chatService: ChatService) { }
+  constructor(public chatService: ChatService) {}
 
   ngOnInit() {
     this.chatService.conversation.subscribe((val) => {
         this.messages = this.messages.concat(val);
     });
   }
+  ngAfterContentInit() {
+    this.toolbarChat = document.getElementById("chat-msg-area");
+    console.log("init - done!");
+  }
+
   sendMessage(){
     this.chatService.getBotAnswer(this.value);
   }
 
   scrollToBottom(){
-    let toolbarChat = document.getElementById("chat-msg-area");
-    toolbarChat.scrollTo(0, toolbarChat.scrollHeight);
+    this.toolbarChat.scrollTo(0, this.toolbarChat.scrollHeight);
     console.log("done!");
   }
-
 }

@@ -40,6 +40,10 @@ footer {
 app-chat,
 app-main,
 app-todo {
-  width: 80%; }
+  width: 100%; }
+
+.preloader {
+  padding-top: 10%;
+  font-size: 30px; }
 
 /*# sourceMappingURL=styles.css.map */

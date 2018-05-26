@@ -7,10 +7,10 @@ export class TodoService {
   todos: Todo[] = listToDo;
 
   // constructor(private httpService: HttpService){}
-  //   //
-  //   // getListTodos(){
-  //   //   this.httpService.get(environment.dataTodo);
-  //   // }
+  //
+  // getListTodos(){
+  //   this.httpService.get(environment.dataTodo);
+  // }
 
 
   getTodos(){
