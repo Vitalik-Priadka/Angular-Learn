@@ -9,6 +9,7 @@ import {
   MatCardModule,
   MatInputModule,
 } from "@angular/material";
+import {FactorialPipe} from "./factorial.pipe";
 
 
 @NgModule({
@@ -17,8 +18,8 @@ import {
     FormsModule,
     MatButtonModule,
     MatInputModule,
-    MatCardModule,
+    MatCardModule
   ],
-  declarations: [MainComponent, ChatComponent]
+  declarations: [MainComponent, ChatComponent, FactorialPipe]
 })
 export class AngularBotModule { }

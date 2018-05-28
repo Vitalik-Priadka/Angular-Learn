@@ -6,9 +6,9 @@ import {TodoService} from "../todo.service";
   templateUrl: './todo.component.html',
   styleUrls: ['./todo.component.css']
 })
-@Directive({
-  selector: '[bold]'
-})
+// @Directive({
+//   selector: '[bold]'
+// })
 export class TodoComponent{
   info: string = 'Вы можете записать Task и добавить его в List:';
 
