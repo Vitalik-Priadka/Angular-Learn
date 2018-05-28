@@ -7,9 +7,7 @@ import { ChatComponent } from './chat/chat.component';
 import {
   MatButtonModule,
   MatCardModule,
-  MatFormFieldControl,
-  MatFormFieldModule,
-  MatInputModule
+  MatInputModule,
 } from "@angular/material";
 
 

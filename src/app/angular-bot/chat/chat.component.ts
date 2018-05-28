@@ -1,4 +1,4 @@
-import {AfterContentInit, Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {AfterContentInit, Component, OnInit} from '@angular/core';
 import {ChatService, Message} from "../chat.service";
 
 @Component({
@@ -31,4 +31,5 @@ export class ChatComponent implements OnInit,AfterContentInit {
     this.toolbarChat.scrollTo(0, this.toolbarChat.scrollHeight);
     console.log("done!");
   }
+
 }

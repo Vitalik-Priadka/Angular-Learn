@@ -16,9 +16,6 @@ export class TodoListComponent implements OnInit{
 
   constructor(private todoService: TodoService){
     this.todos = [];
-    // this.todoService.getListTodos().subscribe( data => {
-    //   console.log(JSON.parse(data['data']));
-    // });
   }
 
   ngOnInit(){

@@ -1,17 +1,10 @@
 import { listToDo } from '../shared/data-todos';
 import { Todo } from './todo';
-import {HttpService} from "../shared/http.service";
-import {environment} from "../../environments/environment";
+import {Injectable} from "@angular/core";
 
+@Injectable()
 export class TodoService {
   todos: Todo[] = listToDo;
-
-  // constructor(private httpService: HttpService){}
-  //
-  // getListTodos(){
-  //   this.httpService.get(environment.dataTodo);
-  // }
-
 
   getTodos(){
     return this.todos;
@@ -31,4 +24,7 @@ export class TodoService {
     todo.completed = !todo.completed;
   }
 
+  public get trace() {
+    return console.debug.bind(console);
+  }
 }

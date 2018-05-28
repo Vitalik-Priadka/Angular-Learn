@@ -1,12 +1,4 @@
-$font-stack:    Helvetica, sans-serif;
-$font-size: 14px;
-$logo-width: 50px;
-
-$color-main-blue: #1976D2;
-$color-main-red: #dd0031;;
-$color-main-text: #f5f5f5;
-$color-main-grey: #757575;
-$background-color: #f5f5f5;
+@import "../../../styles";
 
 .todo-item {
   padding: 1em;
@@ -19,10 +11,10 @@ $background-color: #f5f5f5;
   &.completed {
     & .title{
       text-decoration: line-through;
-      color: lightgray;
+      color: $color-main-lightgrey;
     }
     & .material-icons {
-      color: lightgray;
+      color: $color-main-lightgrey;
     }
   }
   & input {
