@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 
 import { TodoService} from "../todo.service";
 import { Todo } from '../todo';
-import {HttpService} from "../../shared/http.service";
 
 
 // Декоратор

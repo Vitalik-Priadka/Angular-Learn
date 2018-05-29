@@ -1,15 +1,6 @@
 @import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "theme";
 
-$font-stack:    Helvetica, sans-serif;
-$font-size: 14px;
-$logo-width: 50px;
-
-$color-main-blue: #1976D2;
-$color-main-red: #dd0031;
-$color-main-text: #f5f5f5;
-$color-main-grey: #757575;
-$background-color: #f5f5f5;
-$color-main-lightgrey: #c3c3c3;
 
 
 * {
@@ -62,12 +53,14 @@ footer {
   text-align: center;
 }
 
-app-chat,
-app-main,
-app-todo{
-  width: 100%;
-}
 .preloader{
   padding-top: 10%;
   font-size: 30px;
+}
+
+app-chat,
+app-main,
+app-todo,
+app-test{
+  width: 100%;
 }

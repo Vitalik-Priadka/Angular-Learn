@@ -9,7 +9,6 @@ export class FactorialPipe implements PipeTransform {
     for (let i = 1; i <= value; i++) {
       result = result * i;
     }
-
     return result;
   }
 }
