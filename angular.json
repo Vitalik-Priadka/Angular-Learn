@@ -19,7 +19,7 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "src/favicon.ico",
+              "src/assets/favicon.ico",
               "src/assets"
             ],
             "styles": [
@@ -50,11 +50,16 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "hmrWarning": false,
             "browserTarget": "myAngularApp:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "myAngularApp:build:production"
+            },
+            "hmr": {
+              "hmr": true,
+              "browserTarget": "car-repair-service:build:hmr"
             }
           }
         },
@@ -76,7 +81,7 @@
             ],
             "scripts": [],
             "assets": [
-              "src/favicon.ico",
+              "src/assers/favicon.ico",
               "src/assets"
             ]
           }

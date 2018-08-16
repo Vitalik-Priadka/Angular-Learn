@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  hmr: true,
+
   host: './app/shared/',
   dataTodo: 'data-todos.json'
 };

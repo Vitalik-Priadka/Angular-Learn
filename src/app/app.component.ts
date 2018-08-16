@@ -16,8 +16,7 @@ export class AppComponent {
     {path: '/main', label: 'Главная', active: 'button-active'},
     {path: '/chat', label: 'Чат', active: 'button-active'},
     {path: '/todo', label: 'Дела', active: 'button-active'},
-    {path: '/test', label: 'Тесты', active: 'button-active'}
-  ]
+  ];
 
   constructor(titleService: Title, router: Router, activatedRoute: ActivatedRoute) {
     router.events.subscribe(event => {
@@ -27,7 +26,6 @@ export class AppComponent {
       }
     });
   }
-
 
   getTitle(state, parent) {
     var data = [];

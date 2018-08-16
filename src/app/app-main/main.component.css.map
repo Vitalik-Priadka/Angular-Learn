@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,UAAU;EACR,WAAW,EAAE,oJAAoJ;EACjK,KAAK,ECGW,OAAO;EDDvB,iBAAS;IACP,OAAO,EAAE,MAAM;EAEjB,gBAAQ;IACN,UAAU,EAAE,OAAO;;AAGvB,YAAa;EACX,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,IAAI;EACZ,gBAAgB,EAAE,kCAAkC;EACpD,eAAe,EAAE,IAAI;EACrB,mBAAmB,EAAE,MAAM;EAC3B,iBAAiB,EAAE,SAAS",
+"sources": ["main.component.scss","../../assets/css/_theme.scss"],
+"names": [],
+"file": "main.component.css"
+}

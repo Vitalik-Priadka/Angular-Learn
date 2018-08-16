@@ -3,6 +3,15 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "paths": {
+      "@app/*": ["src/app/*"],
+      "@app-main/*": ["src/app/app-main/*"],
+      "@app-chat/*": ["src/app/app-chat/*"],
+      "@app-todo/*": ["src/app/app-todo/*"],
+
+      "@routing/*": ["src/app/routing/*"],
+      "@shared/*": ["src/app/shared/*"]
+    },
     "sourceMap": true,
     "declaration": false,
     "moduleResolution": "node",

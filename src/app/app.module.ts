@@ -1,35 +1,33 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { TodoAppModule} from "./todo-app/todo-app.module";
-import {AngularBotModule} from "./angular-bot/angular-bot.module";
-import { AppRoutingModule} from "./app-routing.module";
+import {AppTodoModule} from "@app-todo/app-todo.module";
+import {AppRoutingModule} from "@routing/app-routing.module";
 
-import { AppComponent } from './app.component';
+import {AppComponent} from './app.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {TestsModule} from "./tests/tests.module";
+import {AppMainModule} from "@app-main/app-main.module";
+import {AppChartModule} from "@app-chat/app-chart.module";
+import {FactorialPipe} from "@shared/pipes/factorial.pipe";
 
 
 @NgModule({
-  declarations: [   //Регистрация
-    AppComponent,
-  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+
     AppRoutingModule,
-    TodoAppModule,
-    AngularBotModule,
-    TestsModule
+    AppTodoModule,
+    AppMainModule,
+    AppChartModule,
   ],
-  providers: [], // Регистр сервисов
-  bootstrap: [AppComponent] //Для запуска использовать это
+  declarations: [
+    AppComponent,
+    FactorialPipe,
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
 
-/*
- ng g module tests --spec false
- ng g component tests/new-component --spec false --style=scss
- ng g service tests/my-new-service
-  */
 

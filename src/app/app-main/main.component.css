@@ -1,0 +1,18 @@
+.main-card {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  color: #757575; }
+  .main-card__title {
+    padding: 0 50px; }
+  .main-card__text {
+    text-align: justify; }
+
+.main__image {
+  height: 225px;
+  width: 200px;
+  margin: auto;
+  background-image: url("../../assets/loin-image.png");
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat; }
+
+/*# sourceMappingURL=main.component.css.map */

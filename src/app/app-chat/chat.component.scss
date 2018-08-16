@@ -1,0 +1,50 @@
+@import "../../../node_modules/@angular/material/prebuilt-themes/indigo-pink.css";
+@import "../../assets/css/theme";
+
+.message {
+  border-radius: 5px;
+  margin: 0 15px 10px;
+  padding: 10px 10px;
+  position: relative;
+  font-weight: bold;
+}
+.message.to {
+  background-color: $color-main-blue;
+  color: #fff;
+  margin-left: 100px;
+  //text-align: right;
+}
+.message.from {
+  background-color: #E5E4E9;
+  color: #363636;
+  margin-right: 100px;
+
+}
+.message.to + .message.to,
+.message.from + .message.from {
+  margin-top: -10px;
+}
+
+.chat-box{
+  overflow-y: hidden;
+}
+
+#chat-msg-area{
+  max-height: 250px;
+  overflow-y: scroll;
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: none;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-main-blue;
+    outline: 1px solid $color-main-blue;
+    border-radius: 50px;
+  }
+}
+.chat-field{
+  width: 70%;
+}
